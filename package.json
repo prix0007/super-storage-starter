@@ -17,8 +17,8 @@
     "web3.storage": "^3.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "export NODE_OPTIONS=\"--max-old-space-size=8192\" && react-scripts start",
+    "build": "export NODE_OPTIONS=\"--max-old-space-size=8192\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:program": "cargo build-bpf --manifest-path=./program/Cargo.toml --bpf-out-dir=dist/program",
